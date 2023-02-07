@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function start</title>
+    <style>
+       
+        
+        
+        .msgBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 242px;
+            background: white;
+        }
+
+        .msg p {
+            line-height: 1.5;
+            padding: 10px 20px;
+            color: #333;
+            padding-left: 82px;
+            background-position: 25% center;
+            background-repeat: no-repeat;
+        }
+
+        .msg button {
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.1rem;
+            color: #aaa;
+
+        }
+        
+img{
+    height: auto;
+width: 100px;
+
+padding-left: 0px;
+background-color: none;
+background-position: 10% center;
+padding: 15% 30%;
+background-repeat: no-repeat;
+line-height: 1;
+margin: 30px;
+   left: 10%;
+   right: 10%;
+   padding-bottom: 1px;
+   top: 50%;
+   padding-right: 2px;
+        
+}
+    </style>
+</head>
+<body>
+
+   <button> Display message box</button> 
+
+   <script>
+    
+
+    function displayMessage(msgText,msgType){
+
+const body1 = document.body;
+
+const paneL= document.createElement('div');
+paneL.setAttribute('class','msgBox');
+body1.appendChild(paneL);
+
+const msg = document.createElement('p');
+msg.textContent ='Your inbox is almost full delete some mails', 'warning';
+paneL.appendChild(msg);
+
+const closeBtn = document.createElement('button');
+closeBtn.textContent = 'x';
+paneL.appendChild(closeBtn);
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', ()=> displayMessage('Your inbox is almost full delete some mails', 'warning'));
+
+
+closeBtn.addEventListener('click', () => paneL.parentNode.removeChild(paneL));  
+
+console.log(paneL)
+console.log(msg)
+console.log(closeBtn)
+console.log(btn)
+
+if(msgType === 'warning') {
+    msg.style.backgroundImage = 'url(icons/warning.png)';
+    paneL.style.backgroundColor ='red';
+}else if (msgType === 'chat') {
+    msg.style.backgroundImage = 'url(icons/chat.png';
+    paneL.style.backgroundColor = 'aqua';
+}else {
+    msg.style.paddingLeft = '20px';
+}
+
+}
+displayMessage();
+
+
+   </script>
+    <p><img src="icons/warning.png"></p>
+</body>
+</html>
