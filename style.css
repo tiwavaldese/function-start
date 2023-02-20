@@ -1,0 +1,66 @@
+     
+        
+        .msgBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 242px;
+            background: none;
+        }
+
+        .msg p {
+            line-height: 1.5;
+            padding: 10px 20px;
+            color: #333;
+            padding-left: 82px;
+            background-position: 25% center;
+            background-repeat: no-repeat;
+        }
+
+        .msg button {
+            background: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.1rem;
+            color: #aaa;
+
+        }
+     *{
+        background-color: violet;
+     }   
+img{
+    height: auto;
+width: 100px;
+
+padding-left: 0px;
+background-color: none;
+background-position: 10% center;
+padding: 15% 30%;
+background-repeat: no-repeat;
+line-height: 1;
+margin: 30px;
+   left: 10%;
+   right: 10%;
+   padding-bottom: 1px;
+   top: 50%;
+   padding-right: 2px;
+        
+}
+
+.h{ margin-bottom: 10px;
+    justify-content: center;
+}
+
+.li{
+    margin-bottom: 10px;
+    color: black;
+}
+
+.li button{
+font-size: 12px;
+margin-left: 20px;
+color: #666;
+}
