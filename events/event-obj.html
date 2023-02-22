@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event listener</title>
+    
+
+
+  </head>
+  <body> 
+    <button>Change color</button>
+  
+
+    <script>
+
+      const btn= document.querySelector('button');
+      
+
+  
+      function random(number){
+        return Math.floor(Math.random() * (number + 1));
+      }
+ 
+      function bgChange(e) {
+        const rndCol = `rgb(${random(255)},${random(255)},${random(255)})`;
+        e.target.style.backgroundColor = rndCol;
+        console.log(e);
+      };
+      btn.addEventListener('click', bgChange);
+
+    </script>
+    <input id="textBox" type="text"/>
+    <div id="output"></div>
+    <script>
+        const textBox = document.querySelector("#textBox");
+        const output = document.querySelector("#output");
+        textBox.addEventListener(
+            "keydown",
+            (event) => (output.textContent = `you pressed "${event.key}".`)
+            );
+    </script>
+   
+  
+  </body>
+</html>
