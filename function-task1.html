@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function:task1</title>
+    <link rel="stylesheet" href="index.css">
+ 
+
+  </head>
+  <body>
+<section class="preview">
+
+</section>
+
+   <button>Random</button>
+   <h1>Result</h1>
+
+    <script>
+
+const para = document.createElement('p')
+        const section = document.querySelector('section');
+        const btnRandom= document.querySelector('button');
+        let result = document.querySelector('h1')
+
+        const name= ['Chris','Li Kang','Anne','Francesca','Mustafa','Tina','Bert','Jada']
+        
+        section.appendChild(para)
+
+        function getRandomNumber(min,max){
+            let step1= max - min + 1;
+            let step2 = Math.random() *step1;
+            let result = Math.floor(step2) + min;
+
+            return result;
+        }
+
+        btnRandom.addEventListener('click', () => {
+            let index = getRandomNumber(0,name.length-1);
+            result.innerText = name[index];
+        })
+
+
+
+    </script>
+</body>
+    
+    </html>
