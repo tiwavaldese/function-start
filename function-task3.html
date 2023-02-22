@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function:task3</title>
+    <link rel="stylesheet" href="index.css">
+ 
+
+  </head>
+  <body>
+    
+    <section class="preview"> </section>
+
+    <script>
+
+        
+        const para = document.createElement('p')
+        const section = document.querySelector('section');
+
+        
+        const users= ['Chris','Li Kang','Anne','Francesca','Mustafa','Tina','Bert','Jada']
+       
+
+        function isShort(users){
+            return users.length < 6;
+        }
+        const shortNames = users.filter(isShort);
+        para.textContent = shortNames;
+         
+        section.appendChild(para)
+
+
+
+    </script>
+    </body>
+    </html>
