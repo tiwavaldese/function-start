@@ -31,6 +31,26 @@
       btn.addEventListener('mouseover', changeBackground);
 
     </script>
+   <div id="container">
+    <button1>Click me! </button1>
+    </div>
+    <pre id="output"></pre>
    
+    <script>
+
+      const output = document.querySelector("#output");
+      function handleClick(e){
+        output.textContent += `you clicked on a ${e.currentTarget.tagName} element\n`;
+      }
+      const container = document.querySelector('#container');
+      const btn1 = document.querySelector("button1");
+
+      document.body.addEventListener("click",handleClick,{capture:true});
+      container.addEventListener("click",handleClick,{capture:true});
+      btn1.addEventListener("click",handleClick);
+
+    </script>
+
+
   </body>
 </html>

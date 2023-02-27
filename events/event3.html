@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            background-color: grey;
+            padding: 15px 32px;
+            text-align: center;
+            border-radius: 25px;
+        }
+    </style>
+   
+</head>
+<body>
+    
+
+        <button style="background-color: redBtn;text-align: center;"id="redBtn">Red</button>
+        <button style="background-color: yellow;text-align: center;"id="yellowBtn">Yellow</button>
+        <button style="background-color: green;text-align: center;"id="greenBtn">Green</button>
+        <button style="background-color: purple;text-align: center;"id="purpleBtn">Purple</button>
+        
+ 
+
+    <script>
+        const buttonBar = document.querySelector('.button-bar');
+        const red= document.querySelector('redBtn')
+        const yellowBtn= document.querySelector('yellowBtn')
+        const greenBtn= document.querySelector('greenBtn')
+        const purpleBtn= document.querySelector('purpleBtn')
+
+  
+
+  buttonBar.addEventListener('mouseover', changeBackground);
+redBtn.addEventListener('click', function onClick(){
+    redBtn.style.backgroundColor ='red';
+  yellowBtn.style.backgroundColor ='red';
+  greenBtn.style.backgroundColor ='red';
+  purpleBtn.style.backgroundColor ='red';
+
+});
+yellowBtn.addEventListener('click', function onClick(){
+    redBtn.style.backgroundColor ='yellow';
+  yellowBtn.style.backgroundColor ='yellow';
+  greenBtn.style.backgroundColor ='yellow';
+  purpleBtn.style.backgroundColor='yellow';
+});
+
+greenBtn.addEventListener('click', function onClick(){
+    redBtnstyle.backgroundColor ='green';
+  yellowBtn.style.backgroundColor ='green';
+  greenBtn.style.backgroundColor ='green';
+  purpleBtn.style.backgroundColor='green';
+});
+
+purpleBtn.addEventListener('click', function onClick(){
+    redBtn.style.backgroundColor ='purple';
+  yellowBtn.style.backgroundColor='purple';
+  greenBtn.style.backgroundColor ='purple';
+  purpleBtn.style.backgroundColor ='purple';
+});
+    </script>
+  
+
+    
+  
+</body>
+</html>
+
