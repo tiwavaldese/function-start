@@ -10,13 +10,190 @@
     
     <section class="preview">
     </section>
+    <h>Hello</h>
     <button class="off">Machine is off</button>
+    <button1>change user</button1>
 
     <script>
         const btn= document.querySelector('.off');
        
         btn.addEventListener("click")
+        const myHeading = document.querySelector('h');
+        const btn1 = document.querySelector('button1');
+        function setUserName(){
+            const myName= prompt('please enter your name');
+            localStorage.setItem("name", myName);
+            myHeading.textContent= `Hello,${myName}`;
+            if(!myName ){
+                setUserName();
+            }else{
+                localStorage.setItem("name", myName);
+                myHeading.textContent= `Hello,${myName}`;
+
+            }
+        }
+        btn1.addEventListener('click' ,function onclick(){
+            setUserName();
+        })
+        console.log(setUserName('won'));
+
           
+    </script>
+   
+    <script>
+        
+        function favoriteAnimal(animal){
+            return animal +  "is my favorite animal"
+        }
+        console.log(favoriteAnimal('Goat,'));
+
+        function showMessage(){
+            console.log("Hello i'm JavaScript" )
+        }
+        showMessage();
+        showMessage();
+
+        let userName = 'Win';
+        function showUserName(){
+            let message = 'Hell0,' + userName;
+            console.log(message);
+        }
+        showUserName();
+
+        function showText(from,text){
+            from ='*'+ from +'*'
+            console.log(from + ':' +text)
+        }
+        let from= 'Ann';
+        showText(from, 'Hello')
+
+        function showTex(form,text='no text given'){
+            form ='*'+ form +'*'
+            console.log(form + ':' +text)
+        }
+        let form= 'Ann';
+        showTex(form, )
+
+        function showT(text){
+            if(text=== undefined){
+                text='missing parameter'
+
+            }
+            console.log(text)
+        }
+        showT();
+
+        function showCount(count){
+            if (count === undefined){
+                count= 'unknown'
+            }
+            console.log(count);
+        }
+        showCount();
+        showCount(0);
+
+        function checkAge(age){
+            if(age>=18){
+                return true
+            }else{
+                return confirm('do you have permission from your parents?')
+            }
+        }
+        let age = prompt('how old are you?', 18);
+        if(checkAge){
+            console.log('access granted')
+        }else{
+            console.log('access denied')
+        }
+        function showPrime(n){
+            nextPrime: for(let i=2;i<n;i++){
+                for(let j=2;j<i;j++){
+                    if(i%j==0) continue nextPrime;
+                }
+                console.log(i)
+            }
+        }
+        function ask(question,yes,no){
+            if(question)yes()
+            else no()
+        }
+        function showOk(){
+            console.log('you agreed')
+        }
+        function showCancel(){
+            console.log('you canceled the execution')
+        }
+        ask('do you agreed',showOk,showCancel)
+     
+        function add(c,d){
+           console.log( c+d);
+        }
+        function average(c,d){
+            console.log( add(c+d/2));
+        }
+        let x= average(10,20);
+
+
+        let answer= parseInt(prompt("Please enter the number you want to FizzBuzz up to: 20"));
+
+for(let i=1;i<=20; i++ ){
+   if(i % 3===0 && i % 5===0)
+   console.log("FizzBuzz")
+   else if(i % 3 === 0)
+   console.log("Fizz")
+
+   else if(i % 5=== 0)
+   console.log("Buzz");
+   else
+   console.log(i)
+}
+
+let GroceryList =['Fruit','Vegetables','Baking','Spices','Canned goods','Pasta','Meat','Household','Dairy','Toileteies'];
+    let aisles = 10;
+    let cart = 'get cart in the grocery store'
+    let items='';
+if('items in the list correspond to the  aisles '){
+        console.log('add items to cart')
+         items = items  - 1;
+    }
+  
+    else if('items  in the list do not correspond to the aisles'){
+        console.log('ask cashier for help')
+    }
+    else{
+        console.log('move to the next aisles')
+        aisles = aisles + 1;
+    }
+
+
+   let players=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+   function count(){
+    for(let i= 1; i<= 100; i++){
+        if(i % 7 === 0)
+        console.log('switch direction of count');
+        else
+        console.log(i)
+        if(i % 11 === 0)
+        console.log('skip the next person to count')
+        else
+        console.log(i)
+    }
+
+   }
+   count();
+
+   try{
+   throw new ReferenceError('hello', 'someFile.js', '10');
+   }
+   catch(e){
+    console.log(e instanceof SyntaxError);
+    console.error(e.message);
+    console.error(e.name);
+    console.error(e.fielName);
+    console.error(e.lineNumber);
+    console.error(e.columnNumber);
+    console.error(e.stack)
+   }
     </script>
 </body>
 </html>
